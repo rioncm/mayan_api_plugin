@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 class MayanApiPlugin(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'osas_data'
+    name = 'mayan_api_plugin'
 
     def ready(self):
         """
@@ -25,14 +25,14 @@ class MayanApiPlugin(AppConfig):
 
 # Define a settings namespace for your plugin
 namespace = Namespace(
-    label='OSAS API Integration',
-    name='osas_api_integration',
+    label='Mayan API Integration',
+    name='mayan_api_integration',
     version='1.0'
 )
 
 # Define a setting for mapping document types to API endpoints
 setting_api_endpoints = Setting(
-    global_name='OSAS_API_INTEGRATION_ENDPOINTS',
+    global_name='MAYAN_API_INTEGRATION_ENDPOINTS',
     default={
         "example_document_type": {
             "uri": "https://example.com/api/v1/invoicedata/INVOICE_NUM_VAR",
