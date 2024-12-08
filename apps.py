@@ -5,7 +5,7 @@ from .utils import validate_api_settings
 
 logger = logging.getLogger(__name__)
 
-class OsasDataConfig(AppConfig):
+class MayanApiPlugin(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'osas_data'
 
